@@ -2,6 +2,8 @@
 
 **Installation guide**
 * Working 06/01/2025 - Created 06/01/2025
+* Works with scrcpy [scrcpy GITHUB](https://github.com/Genymobile/scrcpy)
+* Bluestacks currently NOT SUPPORTED
 
 **#1: Download**
 * Download ZIP of the project

@@ -1,0 +1,7 @@
+pyautogui
+pywin32
+keyboard
+numpy
+
+# To install the requirements run / Per installare i requisiti esegui la stringa di codice
+# pip install -r requirements.txt

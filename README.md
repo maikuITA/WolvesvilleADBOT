@@ -1,7 +1,7 @@
 # WolvesvilleADBOT
 
 **Installation guide**
-* WORKING 2025
+* Working 06/01/2025 - Created 06/01/2025
 
 **#1: Download**
 * Download ZIP of the project

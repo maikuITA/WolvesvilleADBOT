@@ -5,7 +5,7 @@
 **#1**
 * Download ZIP of the project
 
-![image1](https://imgur.com/a/vFvvIRh)
+![image1](https://i.imgur.com/DEwNATx.png)
 
 **STEP 2**
 * Unzip python, [download it from here](https://www.win-rar.com/predownload.html?&L=0)

@@ -1,28 +1,23 @@
 # WolvesvilleADBOT
 
+**WORKING 2025**
 **Installation guide**
 
-**#1**
+**#1: Download**
 * Download ZIP of the project
 
 ![image1](https://i.imgur.com/DEwNATx.png)
 
-**STEP 2**
-* Unzip python, [download it from here](https://www.win-rar.com/predownload.html?&L=0)
-* Unzip the folder, then access the files inside the folder
-* According to your computer, install either python 3.7.0 32-bit or 64 bit
+**#2: Python**
+* Unzip python-3.7.0-adm64.rar (python-3.7.0.rar is the 32bit VERSION, 64bit RECOMMENDED) and run the .exe
+* Add python to PATH. This is REALLY important when installing the python package!
 
-![image2](https://i.imgur.com/sQf7Ckg.png)
-
-**STEP 3**
-* Add python to PATH. this is REALLY important, when installing the python package, CHECK THIS OPTION
-
-![image3](https://i.imgur.com/CFTe38F.png)
+![image3](https://i.imgur.com/j2M7QqZ.png)
 
 **STEP 4**
-* Click on the directory path and write "cmd" and enter
+* Open folder in terminal (cmd or powershell)
 
-![image4](https://i.imgur.com/H8p53oO.png)
+![image4](https://i.imgur.com/NGXqvvR.png)
 
 **STEP 5**
 * To install the requirements run this code

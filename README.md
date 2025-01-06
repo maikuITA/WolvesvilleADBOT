@@ -43,4 +43,5 @@
 * The script works in two modes, limitless (endless mode) and limited mode. The limited mode has a max number of repetitions that can be changed by modifying the value of the variable "reps" (limited mode is the default option in ver 1.3)
 
 **#6: Run the script**
-* To run the script open the folder in terminal (STEP 3) and paste the following code: ```python.exe wolvesville_YOURLANGUAGE.py```
+* To run the script open the folder in terminal (STEP 3) and paste the following code: 
+* ```python.exe wolvesville_YOURLANGUAGE.py```

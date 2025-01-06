@@ -39,8 +39,8 @@
 
 ![image8](https://i.imgur.com/sg6YeWT.png)
 
-**#5: OPTIONAL: change script mode**
-* The script works in two modes, limitless (endless mode) and limited mode. The limited mode has a max number of repetitions that can be changed by modifying the value of the variable "reps" (limited mode is the default option in ver 1.3)
+**#5: Select the preferred script mode**
+* The script works in two modes, limitless (endless mode) and limited mode. Run it in your preferred mode and language.
 
 **#6: Run the script**
 * To run the script open the folder in terminal (STEP 3) and paste the following code: 

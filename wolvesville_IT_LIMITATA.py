@@ -1,7 +1,7 @@
 # Fork of the bot made by RedScorpion
-# ENGLISH VERSION
+# VERSIONE ITALIANA
 
-# scrcpy is recommended (Bluestacks is a valid alternative)
+# consiglio di usare scrcpy con un telefono android (in alternativa Bluestacks)
 
 import pyautogui as gui
 import win32api as win
@@ -9,79 +9,74 @@ import win32con
 import numpy
 import time
 
-# Function that clicks on "WATCH VIDEO"
+# Funzione che clicca sul bottone "WATCH VIDEO"
 def click(x, y):
     win.SetCursorPos((x, y))
     win.mouse_event(win32con.MOUSEEVENTF_LEFTDOWN, 0, 0)
     time.sleep(0.01)
     win.mouse_event(win32con.MOUSEEVENTF_LEFTUP, 0, 0)
     
-# Function to click the back button (RIGHT CLICK in scrcpy)
+# Funzione che preme il tasto destro del mouse per chiudere gli ad
 def back(x, y):
     win.SetCursorPos((x, y))
     win.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
     time.sleep(0.01)
     win.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
 
-# Function that finds "WATCH VIDEO" or "SPIN" button
+# Funzione che trova il tasto "WATCH VIDEO" o "SPIN"
 def find_button():
-    x = CHANGEME
-    y = CHANGEME
+    x = CAMBIAMI
+    y = CAMBIAMI
     while(True):
         win.SetCursorPos((x, y))
-        # (229, 229, 231) is the RGB code of the WATCH VIDEO and SPIN buttons
+        # (229, 229, 231) è la combinazione RGB del bianco dei bottoni
         if gui.pixelMatchesColor(x, y, (229, 229, 231)):
             #print("DEBUG: WATCH VIDEO!!", x, ",", y)
             click(x, y)
             break
         else:
-            #print("DEBUG: WATCH VIDEO not found on ", x, ",", y)
+            #print("DEBUG: WATCH VIDEO non trovato a ", x, ",", y)
             y = y - 1
 
 def run():
     find_button() # WATCH VIDEO
     
     w = numpy.random.randint(37, 49)
-    print("[1] WATCH VIDEO -> OK {wait:",w,"seconds}")
+    print("[1] WATCH VIDEO -> OK {attesa:",w,"secondi}")
     time.sleep(w)
     
-    back(1437, 1006) # BACK
+    back(1437, 1006) # INDIETRO (chiusura dell'ad)
     w = numpy.random.randint(5, 14)
-    print("[2] AD -> OK {wait:",w,"seconds}")
+    print("[2] AD -> OK {attesa:",w,"secondi}")
     time.sleep(w)
     
     find_button() # SPIN
     print("[3] SPIN -> OK")
     w = numpy.random.randint(15, 20)
-    print("[4] Final wait:",w,"seconds")
-    time.sleep(w) # FINAL WAIT
+    print("[4] Attesa finale:",w,"secondi")
+    time.sleep(w) # attesa finale della ricompensa + scarto
     print()
 
 def countdown():
     startup = 5
-    print("### SCRIPT MADE BY maiku ")
-    print("### Wolvesville AD BOT 1.3")
-    print("Script will start in", startup, "seconds...")
+    print("### SCRIPT REALIZZATO DA maiku ")
+    print("### Wolvesville AD BOT 1.4")
+    print("Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()
 
-##############################################################################
+# Inizio del programma
 
-reps = 1
+ripetizioni = 1
 countdown()
-
-#print("Modalità WITHOUT limits")
-#print() 
-#while True:
-#    print("[?] REP number:", reps)
-#    run()
-#    reps += 1
     
-limite = 30 # CUSTOMIZABLE
-print("Limited mode")
-print("limit:", limite)
+limite = CAMBIAMI # IMPOSTA IL LIMITE DA TE DESIDERATO
+
+print("Modalità con numero limite di ripetizioni")
+print("limite:", limite)
 print()    
-while reps < limite+1:
-    print("[?] REP number:", reps)
+
+while ripetizioni < limite+1:
+    print("[?] RIPETIZIONE NUMERO:", ripetizioni)
     run()
-    reps += 1
+    ripetizioni += 1

@@ -60,7 +60,7 @@ def run():
 def countdown():
     startup = 5
     print("### SCRIPT REALIZZATO DA maiku ")
-    print("### Wolvesville AD BOT 1.3")
+    print("### Wolvesville AD BOT 1.4")
     print("Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()
@@ -70,21 +70,10 @@ def countdown():
 ripetizioni = 1
 countdown()
 
-# PER UTILIZZARE LA MODALITA' SENZA NUMERO DI RIPETIZIONI, TOGLIERE I COMMENTI
-# (hashtag) DA QUESTO PEZZO DI CODICE E INSERIRLO DALLA RIGA 82 IN POI
+print("Modalità SENZA numero limite di ripetizioni")
+print() 
 
-#print("Modalità SENZA numero limite di ripetizioni")
-#print() 
-#while True:
-#    print("[?] RIPETIZIONE NUMERO:", ripetizioni)
-#    run()
-#    ripetizioni += 1
-    
-limite = 30
-print("Modalità con numero limite di ripetizioni")
-print("limite:", limite)
-print()    
-while ripetizioni < limite+1:
+while True:
     print("[?] RIPETIZIONE NUMERO:", ripetizioni)
     run()
     ripetizioni += 1

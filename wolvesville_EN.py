@@ -25,8 +25,8 @@ def back(x, y):
 
 # Function that finds "WATCH VIDEO" or "SPIN" button
 def find_button():
-    x = 1443
-    y = 1007
+    x = CHANGEME
+    y = CHANGEME
     while(True):
         win.SetCursorPos((x, y))
         # (229, 229, 231) is the RGB code of the WATCH VIDEO and SPIN buttons
@@ -60,7 +60,7 @@ def run():
 def countdown():
     startup = 5
     print("### SCRIPT MADE BY maiku ")
-    print("### Wolvesville AD BOT 1.1")
+    print("### Wolvesville AD BOT 1.2")
     print("Script will start in", startup, "seconds...")
     time.sleep(startup)
     print()

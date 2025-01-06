@@ -60,28 +60,28 @@ def run():
 def countdown():
     startup = 5
     print("### SCRIPT MADE BY maiku ")
-    print("### Wolvesville AD BOT 1.2")
+    print("### Wolvesville AD BOT 1.3")
     print("Script will start in", startup, "seconds...")
     time.sleep(startup)
     print()
 
 ##############################################################################
 
-ripetizioni = 1
+reps = 1
 countdown()
 
 #print("Modalità WITHOUT limits")
 #print() 
 #while True:
-#    print("[?] REP number:", ripetizioni)
+#    print("[?] REP number:", reps)
 #    run()
-#    ripetizioni += 1
+#    reps += 1
     
 limite = 30 # CUSTOMIZABLE
 print("Limited mode")
 print("limit:", limite)
 print()    
-while ripetizioni < limite+1:
-    print("[?] REP number:", ripetizioni)
+while reps < limite+1:
+    print("[?] REP number:", reps)
     run()
-    ripetizioni += 1
+    reps += 1

@@ -20,38 +20,27 @@
 ![image4](https://i.imgur.com/NGXqvvR.png)
 
 * To install the requirements run the following code ```pip install -r requirements.txt```
-* (check requirements.txt to check which modules will be installed)
+* (open requirements.txt to check which modules will be installed)
 
 ![image5](https://i.imgur.com/g78iPww.png)
 
 **#4: Coordinates**
-* Run the mouse pointer (MousePosition32bit.exe)
+* Run the mouse position program (MousePosition32bit.exe)
 
-![image6](https://i.imgur.com/3BzSvf9.png)
+![image6](https://i.imgur.com/EDzOFB9.png)
 
-**STEP 7**
-* Now you need to input your coordinates into the code
-* Edit wolvesville_YOURLANGUAGE.py
-* 
-![image7](https://i.imgur.com/USk51L2.png)
+* You need to replace x and y values in the place of ```CHANGEME``` inside of wolvesville_YOURLANGUAGE.py :
 
-**STEP 8**
-* Open your [emulator](https://www.androidauthority.com/best-android-emulators-for-pc-655308/), install the wolvesville game, and loggin with your account, then open the advenrtisment wheel
-* Place your mouse cursor at the bottom of the [emulator](https://www.androidauthority.com/best-android-emulators-for-pc-655308/) screen
-* Read the coordinates on the [mouse pointer](https://github.com/capRS/wolves/blob/main/MousePosition32bit.exe) app
-* Then place the same coordinates you read from [mouse pointer](https://github.com/capRS/wolves/blob/main/MousePosition32bit.exe) and replace x and y values in the place of ```CHANGEME```
+* Put cursor on the pink spot and write down the X and Y coordinates:
 
-![image8](https://i.imgur.com/qloDYCr.png)
+![image7](https://i.imgur.com/GPhIRh8.png)
 
-**STEP 9**
-* Place your mouse cursor at the back button of the [emulator](https://www.androidauthority.com/best-android-emulators-for-pc-655308/) screen
-* Read the coordinates on the [mouse pointer](https://github.com/capRS/wolves/blob/main/MousePosition32bit.exe) app
-* then place the same coordinates you read from [mouse pointer](https://github.com/capRS/wolves/blob/main/MousePosition32bit.exe) and replace x and y values in the place of ```CHANGEME```
-* Safe the file and close 
+* Replace X and Y values:
 
-![image9](https://i.imgur.com/rG2JE5h.png)
- 
- **STEP 10**
- * Go back to the consol and type ```python.exe wolvesville_YOURLANGUAGE.py``` and it will run
- 
- ![imagw10](https://i.imgur.com/Es3Zg9a.png)
+![image8](https://i.imgur.com/sg6YeWT.png)
+
+**#5: OPTIONAL: change script mode**
+* The script works in two modes, limitless (endless mode) and limited mode. The limited mode has a max number of repetitions that can be changed by modifying the value of the variable "reps" (limited mode is the default option in ver 1.3)
+
+**#6: Run the script**
+* To run the script type ```python.exe wolvesville_YOURLANGUAGE.py```

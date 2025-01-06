@@ -1,7 +1,7 @@
 # WolvesvilleADBOT
 
-**WORKING 2025**
 **Installation guide**
+* WORKING 2025
 
 **#1: Download**
 * Download ZIP of the project
@@ -19,8 +19,7 @@
 
 ![image4](https://i.imgur.com/NGXqvvR.png)
 
-* To install the requirements run the following code
-* (check requirements.txt to check which modules will be installed)
+* To install the requirements run the following code (check requirements.txt to check which modules will be installed)
 ```pip install -r requirements.txt```
 
 ![image5](https://i.imgur.com/g78iPww.png)

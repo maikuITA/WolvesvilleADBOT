@@ -1,11 +1,11 @@
 # WolvesvilleADBOT
 
-**HOW TO INSTALL AND PREPARE**
+**Installation guide**
 
-**STEP 1**
-* Download ZIP
+**#1**
+* Download ZIP of the project
 
-![image1](https://i.imgur.com/NMWHwcG.png)
+![image1](https://imgur.com/a/vFvvIRh)
 
 **STEP 2**
 * Unzip python, [download it from here](https://www.win-rar.com/predownload.html?&L=0)

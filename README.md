@@ -14,19 +14,19 @@
 
 ![image3](https://i.imgur.com/j2M7QqZ.png)
 
-**STEP 4**
+**#3: Requirements**
 * Open folder in terminal (cmd or powershell)
 
 ![image4](https://i.imgur.com/NGXqvvR.png)
 
-**STEP 5**
-* To install the requirements run this code
+* To install the requirements run the following code
+* (check requirements.txt to check which modules will be installed)
 ```pip install -r requirements.txt```
 
-![image5](https://i.imgur.com/1uu3rzY.png)
+![image5](https://i.imgur.com/g78iPww.png)
 
-**STEP 6**
-* Run the [mouse pointer](https://github.com/capRS/wolves/blob/main/MousePosition32bit.exe) app by double clicking
+**#4: Coordinates**
+* Run the mouse pointer (MousePosition32bit.exe)
 
 ![image6](https://i.imgur.com/3BzSvf9.png)
 

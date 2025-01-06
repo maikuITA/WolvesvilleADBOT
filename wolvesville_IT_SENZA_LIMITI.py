@@ -45,7 +45,7 @@ def run():
     print("[1] WATCH VIDEO -> OK {attesa:",w,"secondi}")
     time.sleep(w)
     
-    back(1437, 1006) # INDIETRO (chiusura dell'ad)
+    back(CAMBIAMI, CAMBIAMI) # INDIETRO (chiusura dell'ad)
     w = numpy.random.randint(5, 14)
     print("[2] AD -> OK {attesa:",w,"secondi}")
     time.sleep(w)

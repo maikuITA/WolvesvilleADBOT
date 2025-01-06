@@ -45,7 +45,7 @@ def run():
     print("[1] WATCH VIDEO -> OK {wait:",w,"seconds}")
     time.sleep(w)
     
-    back(1437, 1006) # BACK
+    back(CHANGEME, CHANGEME) # BACK
     w = numpy.random.randint(5, 14)
     print("[2] AD -> OK {wait:",w,"seconds}")
     time.sleep(w)

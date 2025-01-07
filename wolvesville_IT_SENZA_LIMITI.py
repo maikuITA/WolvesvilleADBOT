@@ -38,29 +38,36 @@ def find_button():
             #print("DEBUG: WATCH VIDEO non trovato a ", x, ",", y)
             y = y - 1
 
+def approx():
+    ms = numpy.random.randint(1, 10)
+    return ms/100
+
 def run():
     find_button() # WATCH VIDEO
     
     w = numpy.random.randint(37, 49)
-    print("[1] WATCH VIDEO -> OK {attesa:",w,"secondi}")
+    w += approx()
+    print("[1] WATCH VIDEO... OK {attesa:",w,"secondo}")
     time.sleep(w)
     
-    back(CAMBIAMI, CAMBIAMI) # INDIETRO (chiusura dell'ad)
+    back(CHANGEME, CHANGEME) # BACK
     w = numpy.random.randint(5, 14)
-    print("[2] AD -> OK {attesa:",w,"secondi}")
-    time.sleep(w)
+    w += approx()
+    print("[2] AD... OK {attesa:",w,"secondo}")
+    time.sleep(w + approx())
     
     find_button() # SPIN
-    print("[3] SPIN -> OK")
+    print("[3] SPIN... OK")
     w = numpy.random.randint(15, 20)
-    print("[4] Attesa finale:",w,"secondi")
-    time.sleep(w) # attesa finale della ricompensa + scarto
+    w += approx()
+    print("[4] Attesa finale... ",w,"secondi")
+    time.sleep(w + approx()) # ATTESA FINALE
     print()
 
 def countdown():
     startup = 5
     print("### SCRIPT REALIZZATO DA maiku ")
-    print("### Wolvesville AD BOT 1.4")
+    print("### Wolvesville AD BOT 1.5")
     print("Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()

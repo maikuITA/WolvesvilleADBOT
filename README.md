@@ -1,9 +1,10 @@
 # WolvesvilleADBOT
 
 **Installation guide**
-* Working 06/01/2025 - Created 06/01/2025
+* Working 07/01/2025 - Created on 06/01/2025
 * Works with scrcpy! It is already included, if you need the updated version go to the official [github](https://github.com/Genymobile/scrcpy)
 * Bluestacks currently NOT SUPPORTED
+* LINUX VERSION WIP
 
 **#1: Download**
 * Download ZIP of the project

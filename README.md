@@ -1,12 +1,11 @@
 # WolvesvilleADBOT
 
 **Installation guide**
-* Working 07/01/2025 - Created on 06/01/2025
-* Works with scrcpy! It is already included, if you need the updated version go to the official [github](https://github.com/Genymobile/scrcpy)
+* Working 08/01/2025 - Created on 06/01/2025
+* Works with scrcpy! [windows](https://github.com/Genymobile/scrcpy/blob/master/doc/windows.md) [linux](https://github.com/Genymobile/scrcpy/blob/master/doc/linux.md)
 * Bluestacks currently NOT SUPPORTED
-* LINUX VERSION WIP
 
-**#1: Download**
+**#1: Download the script**
 * Download ZIP of the project
 
 ![image1](https://i.imgur.com/DEwNATx.png)
@@ -28,19 +27,8 @@
 ![image5](https://i.imgur.com/g78iPww.png)
 
 **#4: Coordinates**
-* Run the mouse position program (MousePosition32bit.exe)
 
-![image6](https://i.imgur.com/EDzOFB9.png)
-
-* You need to replace x and y values in the place of ```CHANGEME``` inside of wolvesville_YOURLANGUAGE.py :
-
-* Put cursor on the pink spot and write down the X and Y coordinates:
-
-![image7](https://i.imgur.com/GPhIRh8.png)
-
-* Replace X and Y values:
-
-![image8](https://i.imgur.com/sg6YeWT.png)
+[click me](https://github.com/maikuITA/WolvesvilleADBOT/coordinates.md)
 
 **#5: Select the preferred script mode**
 * The script works in two modes, limitless (endless mode) and limited mode. Run it in your preferred mode and language.

@@ -33,7 +33,7 @@ def setPos(x, y):
 def countdowaitn():
     startup = 5
     print("### SCRIPT REALIZZATO DA maiku ")
-    print("### waitolvesville AD BOT LINUX VERSION")
+    print("### waitolvesville AD BOT LINUX VERSION 1.6")
     print("Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()    

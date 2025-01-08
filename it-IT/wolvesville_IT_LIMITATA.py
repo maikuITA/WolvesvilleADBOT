@@ -1,13 +1,14 @@
 # Fork of the bot made by RedScorpion
 # VERSIONE ITALIANA
 
-# consiglio di usare scrcpy con un telefono android (in alternativa Bluestacks)
-
 import pyautogui as gui
 import win32api as win
 import win32con
 import numpy
 import time
+
+x = CAMBIAMI
+y = CAMBIAMI
 
 # Funzione che clicca sul bottone "WATCH VIDEO"
 def click(x, y):
@@ -25,13 +26,12 @@ def back(x, y):
 
 # Funzione che trova il tasto "WATCH VIDEO" o "SPIN"
 def find_button():
-    x = CAMBIAMI
-    y = CAMBIAMI
     while(True):
         win.SetCursorPos((x, y))
         # (229, 229, 231) è la combinazione RGB del bianco dei bottoni
         if gui.pixelMatchesColor(x, y, (229, 229, 231)):
             #print("DEBUG: WATCH VIDEO!!", x, ",", y)
+            x, y = offset(x, y)
             click(x, y)
             break
         else:
@@ -42,24 +42,31 @@ def approx():
     ms = numpy.random.randint(1, 10)
     return ms/100
 
+def offset(x, y):
+    print("Before offset", x, y)
+    y -= numpy.random.randint(7, 19)
+    if numpy.random.randint(1, 2) % 2 == 0:
+        x += numpy.random.randint(7, 74)
+    else:
+        x -= numpy.random.randint(7, 74)  
+    print("After offset", x, y)
+    return x, y 
+
 def run():
     find_button() # WATCH VIDEO
     
-    w = numpy.random.randint(37, 49)
-    w += approx()
+    w = numpy.random.randint(37, 49) + approx()
     print("[1] WATCH VIDEO... OK {attesa:",w,"secondo}")
     time.sleep(w)
     
-    back(CHANGEME, CHANGEME) # BACK
-    w = numpy.random.randint(5, 14)
-    w += approx()
+    back(x, y) # BACK
+    w = numpy.random.randint(5, 14) + approx()
     print("[2] AD... OK {attesa:",w,"secondo}")
     time.sleep(w + approx())
     
     find_button() # SPIN
     print("[3] SPIN... OK")
-    w = numpy.random.randint(15, 20)
-    w += approx()
+    w = numpy.random.randint(15, 20) + approx()
     print("[4] Attesa finale... ",w,"secondi")
     time.sleep(w + approx()) # ATTESA FINALE
     print()
@@ -67,7 +74,7 @@ def run():
 def countdown():
     startup = 5
     print("### SCRIPT REALIZZATO DA maiku ")
-    print("### Wolvesville AD BOT 1.5")
+    print("### Wolvesville AD BOT 1.6")
     print("Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()

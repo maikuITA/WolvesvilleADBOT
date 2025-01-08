@@ -32,9 +32,7 @@
 
 ![image7](https://i.imgur.com/GPhIRh8.png)
 
-* Replace X and Y values:
-
-![image8](https://i.imgur.com/sg6YeWT.png)
+* Replace X and Y values in the code: (ctrl + f, type ```CHANGEME``` and hit enter)
 
 # Select the preferred script mode
 * The script works in two modes, limitless (endless mode) and limited mode. Run it in your preferred mode and language.

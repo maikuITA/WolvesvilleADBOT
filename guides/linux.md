@@ -9,4 +9,14 @@
 (*: the script was tested using Python 3.12.7)
 
 # Venv setup and installing requirements
-In order to work the script need a bunch of modules that you can find in [requirements.txt](https://github.com/maikuITA/WolvesvilleADBOT/blob/main/requirements_linux.txt)
+In order to work the script needs a bunch of modules that you can find in [requirements.txt](https://github.com/maikuITA/WolvesvilleADBOT/blob/main/requirements_linux.txt)
+
+* 1) Creating the virtual env: python3 -m venv /virtual
+
+* 2) Activating the virtual env: source virtual/bin/activate
+
+* 3) Upgrade pip: virtual/bin/python3 -m pip install --upgrade pip
+
+* 4) Requirements install: python3 -m pip install -r requirements_linux.txt
+
+[original guide link](https://www.dataquest.io/blog/a-complete-guide-to-python-virtual-environments/)

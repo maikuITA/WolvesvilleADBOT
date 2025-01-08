@@ -28,7 +28,7 @@
 
 **#4: Coordinates**
 
-[click me](https://github.com/maikuITA/WolvesvilleADBOT/coordinates.md)
+[click me](https://github.com/maikuITA/WolvesvilleADBOT/guides/coordinates.md)
 
 **#5: Select the preferred script mode**
 * The script works in two modes, limitless (endless mode) and limited mode. Run it in your preferred mode and language.

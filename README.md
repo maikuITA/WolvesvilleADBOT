@@ -1,8 +1,11 @@
 # F.A.Q.
 * Working 08/01/2025 - Created on 06/01/2025
 * Support
-scrcpy :white_check_mark:
-emulators :negative_squared_cross_mark:
+> [!IMPORTANT]
+> The script is designed to work with **scrcpy**
+> [!CAUTION]
+> Emulators are currently not supported
+
 
 # Installation guide
 

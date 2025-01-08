@@ -5,7 +5,7 @@
 > The script is designed to work with **scrcpy**
 
 > [!CAUTION]
-> Emulators are currently not supported
+> Emulators are currently **NOT supported**
 
 
 # Installation guide

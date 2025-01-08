@@ -5,7 +5,8 @@
 * [Linux guide](https://github.com/maikuITA/WolvesvilleADBOT/blob/main/guides/linux.md)
 
 # F.A.Q.
-* Working 08/01/2025 - Created on 06/01/2025
+> [!NOTE]
+> Created 06/01/2025 - Updated 08/01/2025
 
 > [!IMPORTANT]
 > The script is designed to work with **scrcpy**

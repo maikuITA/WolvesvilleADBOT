@@ -30,7 +30,7 @@ root = xlib.XDefaultRootWindow(display)
 def countdown():
     startup = 5
     print("[@@@] SCRIPT REALIZZATO DA maiku ")
-    print("[@@@] Wolvesville AD BOT LINUX versione 1.6")
+    print("[@@@] Wolvesville AD BOT LINUX versione 1.6.2")
     print("[@@@] Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()    
@@ -123,7 +123,7 @@ ripetizioni = 1
 limite = 100
 
 while(ripetizioni < limite + 1):
-    print(f"[@@@] Ripetizione {ripetizioni}, tempo passato{adesso-inizio}")
+    print(f"[@@@] Ripetizione {ripetizioni}")
     run()
     ripetizioni += 1
 

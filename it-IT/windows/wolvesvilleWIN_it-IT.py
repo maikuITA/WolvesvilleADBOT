@@ -55,27 +55,31 @@ def offset(x, y):
 def run():
     find_button() # WATCH VIDEO
     
-    w = numpy.random.randint(37, 49) + approx()
-    print("[1] WATCH VIDEO... OK {attesa:",w,"secondo}")
-    time.sleep(w)
+    wait = numpy.random.randint(35, 40) + approx()
+    print("[1/3] WATCH BUTTON... OK")
+    print(f"[===] Attesa: {wait} secondi")
+    time.sleep(wait)
     
     back(x, y) # BACK
-    w = numpy.random.randint(5, 14) + approx()
-    print("[2] AD... OK {attesa:",w,"secondo}")
-    time.sleep(w + approx())
+    wait = numpy.random.randint(5, 8) + approx()
+    print("[2/3] AD BUTTON... OK")
+    print(f"[===] Attesa: {wait} secondi")
+    time.sleep(wait)
     
     find_button() # SPIN
-    print("[3] SPIN... OK")
-    w = numpy.random.randint(15, 20) + approx()
-    print("[4] Attesa finale... ",w,"secondi")
-    time.sleep(w + approx()) # ATTESA FINALE
+    print(f"[{3}/{3}] SPIN... OK")
+    
+    # ATTESA FINALE
+    wait = numpy.random.randint(13, 18) + approx()
+    print(f"[===] Attesa finale: {wait} secondi")
+    time.sleep(wait) 
     print()
     
 def countdown():
     startup = 5
-    print("### SCRIPT REALIZZATO DA maiku ")
-    print("### Wolvesville AD BOT 1.6")
-    print("Avvio dello script tra", startup, "secondi...")
+    print("[@@@] SCRIPT REALIZZATO DA maiku ")
+    print("[@@@] Wolvesville AD BOT LINUX versione 1.6.2")
+    print("[@@@] Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()
 
@@ -84,13 +88,9 @@ def countdown():
 ripetizioni = 1
 countdown()
     
-limite = CAMBIAMI # IMPOSTA IL LIMITE DA TE DESIDERATO
-
-print("Modalità con numero limite di ripetizioni")
-print("limite:", limite)
-print()    
+limite = CAMBIAMI # IMPOSTA IL LIMITE DA TE DESIDERATO   
 
 while ripetizioni < limite+1:
-    print("[?] RIPETIZIONE NUMERO:", ripetizioni)
+    print(f"[@@@] Ripetizione {ripetizioni}")
     run()
     ripetizioni += 1

@@ -26,31 +26,26 @@ sleep = 0.05
 # Displays
 display = xlib.XOpenDisplay(None)
 root = xlib.XDefaultRootWindow(display)
-
-def setPos(x, y):
-    xlib.XwarpPointer(display,None,root,0,0,0,0,x,y)
     
 def countdown():
     startup = 5
-    print("### SCRIPT REALIZZATO DA maiku ")
-    print("### waitolvesville AD BOT LINUX VERSION 1.6")
-    print("Avvio dello script tra", startup, "secondi...")
+    print("[@@@] SCRIPT REALIZZATO DA maiku ")
+    print("[@@@] Wolvesville AD BOT LINUX versione 1.6")
+    print("[@@@] Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()    
     
+# Funzione che trova i bottoni WATCH VIDEO e SPIN 
 def findButton(x, y):
     tries = 1
-    max_tries = 10
+    max_tries = 5
     while(True):
         try:
             if gui.pixelMatchesColor(x, y, (229, 229, 231)):
-                #print("DEBUG: WATCH VIDEO!!", x, ",", y)
                 return x, y
             elif y < 400:
-                #print("Exception")
                 raise Exception
             else:
-                #print("DEBUG: waitATCH VIDEO non trovato a ", x, ",", y)
                 y = y - 2
         except:
             if tries < max_tries+1:
@@ -62,6 +57,8 @@ def findButton(x, y):
                 print("[%] Tentativi esauriti, fermo lo script")
                 return
 
+# Click sinistro e destro del mouse
+
 m = PyMouse()
 def leftClick(x, y):
     m.click(x, y, 1)
@@ -69,50 +66,64 @@ def leftClick(x, y):
 def rightClick(x, y):
     m.click(x, y, 2)
     
+# Aggiungo dei ms casuali ai tempi di attesa
 def approx():
     ms = numpy.random.randint(133, 931)
     return ms/1000
     
 def offset(x, y):
-    print("Before offset", x, y)
-    y -= numpy.random.randint(7, 19)
-    if numpy.random.randint(1, 2) % 2 == 0:
-        x += numpy.random.randint(7, 74)
+    # Offset della y
+    y -= numpy.random.randint(3, 8)
+    
+    # Offset della x
+    if numpy.random.randint(1, 11) % 2 == 0: # Scelgo a caso se andare a destra o a sinistra
+        x += numpy.random.randint(5, 20)
     else:
-        x -= numpy.random.randint(7, 74)  
-    print("After offset", x, y)
+        x -= numpy.random.randint(5, 20)  
+
     return x, y 
     
 def run():
-    # Adding offset to mouse click
+    # WATCH VIDEO
     bx, by = findButton(x, y)
     bx, by = offset(bx, by)
-    leftClick(bx, by) # WATCH VIDEO
-    wait = numpy.random.randint(37, 49) + approx()
-    print("[1] waitATCH BUTTON... OK {attesa:",wait,"secondi}")
+    leftClick(bx, by)
+    wait = numpy.random.randint(35, 40) + approx()
+    print("[1/3] WATCH BUTTON... OK")
+    print(f"[===] Attesa: {wait} secondi")
     time.sleep(wait)
     
-    rightClick(bx, by) # CHIUSURA AD 
-    wait = numpy.random.randint(5, 14) + approx()
-    print("[2] AD... OK {attesa:",wait,"secondi}")
+    # CHIUSURA AD 
+    rightClick(bx, by) 
+    wait = numpy.random.randint(5, 8) + approx()
+    print("[2/3] AD BUTTON... OK")
+    print(f"[===] Attesa: {wait} secondi")
     time.sleep(wait)
     
+    # SPIN
     bx, by = findButton(x, y)
     bx, by = offset(bx, by)
-    leftClick(bx, by) # SPIN 
-    print("[3] SPIN... OK")
-    wait = numpy.random.randint(15, 20)
-    wait += approx()
-    print("[4] Attesa finale:",wait,"secondi")
-    time.sleep(wait) # attesa finale della ricompensa + scarto
+    leftClick(bx, by)  
+    print(f"[{3}/{3}] SPIN... OK")
+    
+    # ATTESA FINALE
+    wait = numpy.random.randint(13, 18) + approx()
+    print(f"[===] Attesa finale: {wait} secondi")
+    time.sleep(wait) 
     print()
 
 ##########################################################################################
 
 countdown()
+
+# Variabile che conta a quante ripetizioni si trova il programma
 ripetizioni = 1
-while(True):
-    print("[?] RIPETIZIONE NUMERO:", ripetizioni)
+
+# Limite al numero di ripetizioni
+limite = 100
+
+while(ripetizioni < limite + 1):
+    print(f"[@@@] Ripetizione {ripetizioni}, tempo passato{adesso-inizio}")
     run()
     ripetizioni += 1
 

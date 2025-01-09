@@ -25,10 +25,10 @@ sleep = 0.05
 
 # Displays
 display = xlib.XOpenDisplay(None)
-root = xlib.XDefaultRootwaitindowait(display)
+root = xlib.XDefaultRootWindow(display)
 
 def setPos(x, y):
-    xlib.XwaitarpPointer(display,None,root,0,0,0,0,x,y)
+    xlib.XwarpPointer(display,None,root,0,0,0,0,x,y)
     
 def countdowaitn():
     startup = 5

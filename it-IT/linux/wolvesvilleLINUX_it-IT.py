@@ -43,7 +43,7 @@ def findButton(x, y):
         try:
             if gui.pixelMatchesColor(x, y, (229, 229, 231)):
                 return x, y
-            elif y < 400:
+            elif y < backup/2:
                 raise Exception
             else:
                 y = y - 2

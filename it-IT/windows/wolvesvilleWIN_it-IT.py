@@ -8,8 +8,8 @@ import numpy
 import time
 
 # CAMBIAMI
-x = 1039
-y = 756
+x = 1443
+y = 1007
 
 # y BACKUP used to restore y to a normal value
 backup = y
@@ -74,7 +74,7 @@ def offset(x, y):
     return x, y
 
 def run():
-    findButton() # WATCH VIDEO
+    findButton(x, y) # WATCH VIDEO
     
     wait = numpy.random.randint(37, 45) + approx()
     print("[1/3] WATCH BUTTON... OK")
@@ -87,7 +87,7 @@ def run():
     print(f"[===] Attesa: {wait} secondi")
     time.sleep(wait)
     
-    findButton() # SPIN
+    findButton(x, y) # SPIN
     print(f"[{3}/{3}] SPIN... OK")
     
     # ATTESA FINALE

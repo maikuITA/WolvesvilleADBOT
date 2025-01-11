@@ -55,7 +55,7 @@ def offset(x, y):
 def run():
     find_button() # WATCH VIDEO
     
-    w = numpy.random.randint(37, 49) + approx() 
+    w = numpy.random.randint(37, 45) + approx() 
     print("[1] WATCH VIDEO... OK {wait:",w,"seconds}")
     time.sleep(w)
     
@@ -73,9 +73,9 @@ def run():
 
 def countdown():
     startup = 5
-    print("### SCRIPT MADE BY maiku ")
-    print("### Wolvesville AD BOT 1.6")
-    print("Script will start in", startup, "seconds...")
+    print("[@@@] SCRIPT MADE BY maiku ")
+    print("[@@@] Wolvesville AD BOT WINDOWS version 1.6.2")
+    print(f"[@@@] Script starting in {startup} secondi...")
     time.sleep(startup)
     print()
 

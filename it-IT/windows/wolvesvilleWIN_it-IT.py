@@ -7,8 +7,15 @@ import win32con
 import numpy
 import time
 
-x = CAMBIAMI
-y = CAMBIAMI
+# CAMBIAMI
+x = 1039
+y = 756
+
+# y BACKUP used to restore y to a normal value
+backup = y
+
+# Tempo fisso da aspettare tra uno spostamento ed un altro
+sleep = 0.05
 
 # Funzione che clicca sul bottone "WATCH VIDEO"
 def click(x, y):
@@ -23,54 +30,68 @@ def back(x, y):
     win.mouse_event(win32con.MOUSEEVENTF_RIGHTDOWN, 0, 0)
     time.sleep(0.01)
     win.mouse_event(win32con.MOUSEEVENTF_RIGHTUP, 0, 0)
-
-# Funzione che trova il tasto "WATCH VIDEO" o "SPIN"
-def find_button():
+            
+# Funzione che trova i bottoni WATCH VIDEO e SPIN 
+def findButton(x, y):
+    tries = 1
+    max_tries = 5
     while(True):
         win.SetCursorPos((x, y))
-        # (229, 229, 231) è la combinazione RGB del bianco dei bottoni
-        if gui.pixelMatchesColor(x, y, (229, 229, 231)):
-            #print("DEBUG: WATCH VIDEO!!", x, ",", y)
-            x, y = offset(x, y)
-            click(x, y)
-            break
-        else:
-            #print("DEBUG: WATCH VIDEO non trovato a ", x, ",", y)
-            y = y - 1
+        try:
+            if gui.pixelMatchesColor(x, y, (229, 229, 231)):
+                x, y = offset(x, y)
+                click(x, y)
+                break
+            elif y < backup/2:
+                raise Exception
+            else:
+                y = y - 2
+        except:
+            if tries < max_tries+1:
+                print(f"[{tries}/{max_tries}] Bottone non trovato")
+                y = backup
+                time.sleep(5)
+                tries += 1
+            else:
+                print("[!!!] Tentativi esauriti, fermo lo script")
+                return
             
+# Aggiungo dei ms casuali ai tempi di attesa
 def approx():
-    ms = numpy.random.randint(1, 10)
-    return ms/100
+    ms = numpy.random.randint(133, 931)
+    return ms/1000
 
 def offset(x, y):
-    print("Before offset", x, y)
-    y -= numpy.random.randint(7, 19)
-    if numpy.random.randint(1, 2) % 2 == 0:
-        x += numpy.random.randint(7, 74)
+    # Offset della y
+    y -= numpy.random.randint(3, 8)
+    
+    # Offset della x
+    if numpy.random.randint(1, 11) % 2 == 0: # Scelgo a caso se andare a destra o a sinistra
+        x += numpy.random.randint(5, 20)
     else:
-        x -= numpy.random.randint(7, 74)  
-    print("After offset", x, y)
-    return x, y 
+        x -= numpy.random.randint(5, 20)  
+
+    return x, y
 
 def run():
-    find_button() # WATCH VIDEO
+    findButton() # WATCH VIDEO
     
-    wait = numpy.random.randint(35, 40) + approx()
+    wait = numpy.random.randint(37, 45) + approx()
     print("[1/3] WATCH BUTTON... OK")
     print(f"[===] Attesa: {wait} secondi")
     time.sleep(wait)
     
     back(x, y) # BACK
-    wait = numpy.random.randint(5, 8) + approx()
+    wait = numpy.random.randint(5, 10) + approx()
     print("[2/3] AD BUTTON... OK")
     print(f"[===] Attesa: {wait} secondi")
     time.sleep(wait)
     
-    find_button() # SPIN
+    findButton() # SPIN
     print(f"[{3}/{3}] SPIN... OK")
     
     # ATTESA FINALE
-    wait = numpy.random.randint(13, 18) + approx()
+    wait = numpy.random.randint(15, 20) + approx()
     print(f"[===] Attesa finale: {wait} secondi")
     time.sleep(wait) 
     print()
@@ -78,7 +99,7 @@ def run():
 def countdown():
     startup = 5
     print("[@@@] SCRIPT REALIZZATO DA maiku ")
-    print("[@@@] Wolvesville AD BOT LINUX versione 1.6.2")
+    print("[@@@] Wolvesville AD BOT WINDOWS versione 1.6.2")
     print("[@@@] Avvio dello script tra", startup, "secondi...")
     time.sleep(startup)
     print()
@@ -88,7 +109,7 @@ def countdown():
 ripetizioni = 1
 countdown()
     
-limite = CAMBIAMI # IMPOSTA IL LIMITE DA TE DESIDERATO   
+limite = 50 # IMPOSTA IL LIMITE DA TE DESIDERATO   
 
 while ripetizioni < limite+1:
     print(f"[@@@] Ripetizione {ripetizioni}")

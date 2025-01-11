@@ -6,7 +6,7 @@
 
 # F.A.Q.
 > [!NOTE]
-> Created 06/01/2025 - Updated 09/01/2025
+> Created 06/01/2025 - Updated 11/01/2025
 
 > [!IMPORTANT]
 > The script is designed to work with [scrcpy](https://github.com/Genymobile/scrcpy)
